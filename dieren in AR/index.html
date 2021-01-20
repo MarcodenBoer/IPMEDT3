@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AR dieren</title>
+</head>
+<body>
+  <a-scene id="js--scene" embedded arjs>
+    <a-assets>
+      <a-assets-item id="giraffe-obj" src="./dieren/giraffe/Giraffe.obj"></a-assets-item>
+      <a-assets-item id="giraffe-mtl" src="./dieren/giraffe/Giraffe.mtl"></a-assets-item>
+
+      <a-assets-item id="hert-obj" src="./dieren/Hert/Hert.obj"></a-assets-item>
+      <a-assets-item id="hert-mtl" src="./dieren/Hert/Hert.mtl"></a-assets-item>
+
+      <a-assets-item id="nijlpaard-obj" src="./dieren/nijlpaard/nijlpaard.obj"></a-assets-item>
+      <a-assets-item id="nijlpaard-mtl" src="./dieren/nijlpaard/nijlpaard.mtl"></a-assets-item>
+
+      <a-assets-item id="olifant-obj" src="./dieren/olifant/olifant.obj"></a-assets-item>
+      <a-assets-item id="olifant-mtl" src="./dieren/olifant/olifant.mtl"></a-assets-item>
+
+      <a-assets-item id="ostrich-obj" src="./dieren/ostrich/ostrich.obj"></a-assets-item>
+      <a-assets-item id="ostrich-mtl" src="./dieren/ostrich/ostrich.mtl"></a-assets-item>
+
+      <a-assets-item id="panda-obj" src="./dieren/panda/panda.obj"></a-assets-item>
+      <a-assets-item id="panda-mtl" src="./dieren/panda/panda.mtl"></a-assets-item>
+
+      <a-assets-item id="penguin-obj" src="./dieren/penguin/penguin.obj"></a-assets-item>
+      <a-assets-item id="penguin-mtl" src="./dieren/penguin/penguin.mtl"></a-assets-item>
+
+      <a-assets-item id="toucan-obj" src="./dieren/toucan/toucan.obj"></a-assets-item>
+      <a-assets-item id="toucan-mtl" src="./dieren/toucan/toucan.mtl"></a-assets-item>
+
+      <a-assets-item id="zebra-obj" src="./dieren/zebra/Zebra.obj"></a-assets-item>
+      <a-assets-item id="zebra-mtl" src="./dieren/zebra/Zebra.mtl"></a-assets-item>
+    </a-assets>
+
+    <!-- markers voor verschillende dieren -->
+    <a-marker type='pattern' url='./marker/pattern-giraffe.patt'>
+      <a-obj-model src="#giraffe-obj" mtl="#giraffe-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+    </a-marker>
+
+    <a-marker type='pattern' url='./marker/pattern-hert.patt'>
+      <a-obj-model src="#hert-obj" mtl="#hert-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+    </a-marker>
+
+    <a-marker type='pattern' url='./marker/pattern-nijlpaard.patt'>
+      <a-obj-model src="#nijlpaard-obj" mtl="#nijlpaard-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+    </a-marker>
+
+    <a-marker type='pattern' url='./marker/pattern-olifant.patt'>
+      <a-obj-model src="#olifant-obj" mtl="#olifant-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+    </a-marker>
+
+    <a-marker type='pattern' url='./marker/pattern-ostrich.patt'>
+      <a-obj-model src="#ostrich-obj" mtl="#ostrich-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+    </a-marker>
+
+    <a-marker type='pattern' url='./marker/pattern-panda.patt'>
+      <a-obj-model src="#panda-obj" mtl="#panda-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+    </a-marker>
+
+    <a-marker type='pattern' url='./marker/pattern-penguin.patt'>
+      <a-obj-model src="#penguin-obj" mtl="#penguin-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+    </a-marker>
+
+    <a-marker type='pattern' url='./marker/pattern-toucan.patt'>
+      <a-obj-model src="#toucan-obj" mtl="#toucan-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+    </a-marker>
+
+    <a-marker type='pattern' url='./marker/pattern-zebra.patt'>
+      <a-obj-model src="#zebra-obj" mtl="#zebra-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+    </a-marker>
+
+    <a-camera>
+      <a-cursor id="js--cursor" color="black"></a-cursor>
+    </a-camera>
+  </a-scene>
+
+</body>
+</html>
