@@ -6,7 +6,7 @@ window.onload = function (){
   let download = document.getElementById('js--download');
   let cancel = document.getElementById('js--cancel');
   let image = document.getElementById('js--image');
-
+  
 
   function captureSnapshot() {
     video = document.getElementById('arjs-video'); //Soms is de let video niet goed ingeladen en heeft die de waarde null waardoor er een error op line 14 komt.

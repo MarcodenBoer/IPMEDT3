@@ -13,11 +13,11 @@
       <a-camera>
         <a-cursor color="grey"></a-cursor>
         <button id="js--camera" style="position: absolute; left: 50%; bottom: 50px; transform: translateX(-50%); border-radius: 100%; height: 100px; width: 100px; font-size: 50px; color: white; background-color: #386362; border: white 5px solid; z-index: 2;" type="button" name="button"><i class="fas fa-camera"></i></button>
-        <section id="snapshot" style="position: absolute; width: 90vw; height: 40vh; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 8px; background-color: #fa9d44; color: white; display: none; grid-template-areas: 'afbeelding' 'cancel' 'download'; z-index: 2;">
+        <section id="snapshot" style="position: absolute; width: 90vw; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 8px; background-color: #fa9d44; color: white; display: none; grid-template-areas: 'afbeelding' 'cancel' 'download'; row-gap: 20px; z-index: 2;">
           <canvas id="capture" width="320px" height="240px"></canvas> <!-- de height en width worden via js aangepast -->
           <div id="js--image" style="grid-area: afbeelding; width: 100%; padding-bottom: 25px"></div>
-          <a id="js--download" style="grid-area: download; width: 100%; font-size: 25px; color: white; background-color: #386362; z-index: 2; text-align: center;" href="" download="download"><i class="fas fa-download" style="padding-right: 15px;"></i>Downloaden</a>
-          <div id="js--cancel" style="grid-area: cancel; width: 100%; font-size: 25px; color: white; background-color: #386362; z-index: 2; text-align: center;"><i class="fas fa-times" style="padding-right: 15px;"></i>Annuleren</div>
+          <a id="js--download" style="grid-area: download; width: 100%; font-size: 25px; padding: 15px 0px; color: white; background-color: #386362; z-index: 2; text-align: center;" href="" download="download"><i class="fas fa-download" style="padding-right: 15px;"></i>Downloaden</a>
+          <div id="js--cancel" style="grid-area: cancel; width: 100%; font-size: 25px; padding: 15px 0px; color: white; background-color: #386362; z-index: 2; text-align: center;"><i class="fas fa-times" style="padding-right: 15px;"></i>Annuleren</div>
         </section>
       </a-camera>
     </a-scene>
