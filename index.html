@@ -58,12 +58,76 @@
         <audio id="struisvogelSound" src="Sounds/struisvogel.mp3" preload="auto"></audio>
         <audio id="nijlpaardSound" src="Sounds/Hippo.mp3" preload="auto"></audio>
         <audio id="giraffeSound" src="Sounds/giraffe.mp3" preload="auto"></audio>
+
+        <a-assets-item id="giraffe-obj" src="./dieren in AR/dieren/giraffe/Giraffe.obj"></a-assets-item>
+        <a-assets-item id="giraffe-mtl" src="./dieren in AR/dieren/giraffe/Giraffe.mtl"></a-assets-item>
+
+        <a-assets-item id="hert-obj" src="./dieren in AR/dieren/Hert/Hert.obj"></a-assets-item>
+        <a-assets-item id="hert-mtl" src="./dieren in AR/dieren/Hert/Hert.mtl"></a-assets-item>
+
+        <a-assets-item id="nijlpaard-obj" src="./dieren in AR/dieren/nijlpaard/nijlpaard.obj"></a-assets-item>
+        <a-assets-item id="nijlpaard-mtl" src="./dieren in AR/dieren/nijlpaard/nijlpaard.mtl"></a-assets-item>
+
+        <a-assets-item id="olifant-obj" src="./dieren in AR/dieren/olifant/olifant.obj"></a-assets-item>
+        <a-assets-item id="olifant-mtl" src="./dieren in AR/dieren/olifant/olifant.mtl"></a-assets-item>
+
+        <a-assets-item id="ostrich-obj" src="./dieren in AR/dieren/ostrich/ostrich.obj"></a-assets-item>
+        <a-assets-item id="ostrich-mtl" src="./dieren in AR/dieren/ostrich/ostrich.mtl"></a-assets-item>
+
+        <a-assets-item id="panda-obj" src="./dieren in AR/dieren/panda/panda.obj"></a-assets-item>
+        <a-assets-item id="panda-mtl" src="./dieren in AR/dieren/panda/panda.mtl"></a-assets-item>
+
+        <a-assets-item id="penguin-obj" src="./dieren in AR/dieren/penguin/penguin.obj"></a-assets-item>
+        <a-assets-item id="penguin-mtl" src="./dieren in AR/dieren/penguin/penguin.mtl"></a-assets-item>
+
+        <a-assets-item id="toucan-obj" src="./dieren in AR/dieren/toucan/toucan.obj"></a-assets-item>
+        <a-assets-item id="toucan-mtl" src="./dieren in AR/dieren/toucan/toucan.mtl"></a-assets-item>
+
+        <a-assets-item id="zebra-obj" src="./dieren in AR/dieren/zebra/Zebra.obj"></a-assets-item>
+        <a-assets-item id="zebra-mtl" src="./dieren in AR/dieren/zebra/Zebra.mtl"></a-assets-item>
       </a-assets>
 
       <a-obj-model penguincomponent givepoints class="animals" src="#penguin-obj" mtl="#penguin-mtl" scale = ".1 .1 .1" position="0 0 -3"></a-obj-model>
       <a-obj-model olifantcomponent givepoints class="animals" src="#olifant-obj" mtl="#olifant-mtl" scale = ".1 .1 .1" position="1.5 0 -4"></a-obj-model>
 
       <a-box olifantcomponent class= "animals" position = "-1.5 0 -3"></a-box>
+
+      <!-- markers voor verschillende dieren -->
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-giraffe.patt'>
+        <a-obj-model src="#giraffe-obj" mtl="#giraffe-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-hert.patt'>
+        <a-obj-model src="#hert-obj" mtl="#hert-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-nijlpaard.patt'>
+        <a-obj-model src="#nijlpaard-obj" mtl="#nijlpaard-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-olifant.patt'>
+        <a-obj-model src="#olifant-obj" mtl="#olifant-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-ostrich.patt'>
+        <a-obj-model src="#ostrich-obj" mtl="#ostrich-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-panda.patt'>
+        <a-obj-model src="#panda-obj" mtl="#panda-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-penguin.patt'>
+        <a-obj-model src="#penguin-obj" mtl="#penguin-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-toucan.patt'>
+        <a-obj-model src="#toucan-obj" mtl="#toucan-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-zebra.patt'>
+        <a-obj-model src="#zebra-obj" mtl="#zebra-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0"></a-obj-model>
+      </a-marker>
     </a-scene>
 
 
