@@ -15,8 +15,9 @@ function animateValue(id, start, end, duration) {
       }, stepTime);
   }
 
-  AFRAME.registerComponent('increaseText', {
+  AFRAME.registerComponent('increasetext', {
     init: function(){
+      console.log("testLog");
       animateValue("js--textIncrease", 0, 100, 500);
     }
   })
