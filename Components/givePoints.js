@@ -1,6 +1,4 @@
-var scene = document.querySelector('a-scene');
-
-  AFRAME.registerComponent('givepoints', {
+AFRAME.registerComponent('givepoints', {
     init: function(){
       this.el.addEventListener('click', (clickedAnimal) =>{
         let scoreAddedText = document.createElement("a-text");
