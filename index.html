@@ -17,7 +17,6 @@
     <script src="Components/increase.js"></script>
     <script src="https://kit.fontawesome.com/5abd383914.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> <!-- AR implentatie -->
-    <script src="foto.js"></script> <!-- Code om foto's te maken -->
     <script src="api.js"></script> <!-- Code voor de API -->
 
     <title>Hospital Hero</title>
@@ -93,7 +92,7 @@
 
       <!-- markers voor verschillende dieren -->
       <a-marker type='pattern' url='./dieren in AR/marker/pattern-giraffe.patt'>
-        <a-obj-model src="#giraffe-obj" mtl="#giraffe-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0" giraffeComponent class="animals"></a-obj-model>
+        <a-obj-model src="#giraffe-obj" mtl="#giraffe-mtl" position="0 -2 0" scale="0.5 0.5 0.5 0.5" rotation="-90 0 0" giraffeComponent class="animals"></a-obj-model>
       </a-marker>
 
       <a-marker type='pattern' url='./dieren in AR/marker/pattern-hert.patt'>
@@ -132,4 +131,5 @@
       <!-- <a-sphere id="js--test" class="animals" radius="1.25" color="yellow" position="0 0 -5"></a-sphere> -->
     </a-scene>
   </body>
+  <script src="foto.js"></script> <!-- Code om foto's te maken -->
 </html>

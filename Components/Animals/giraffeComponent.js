@@ -10,6 +10,7 @@ function createGiraffe(){
     info.setAttribute('color', 'black');
     info.setAttribute('position', '1 -.5 1');
     info.setAttribute('value', "info over een giraffe");
+    localStorage.setItem("infoDier", info.getAttribute("value"));
     animal.setAttribute('src', '#giraffe-obj');
     animal.setAttribute('mtl', '#giraffe-mtl');
     animal.setAttribute('position', '-2 -2 1');
@@ -20,6 +21,7 @@ function createGiraffe(){
     camera.appendChild(background);
     clearInfoButton.style.opacity = 1;
     clearInfoButton.removeAttribute('disabled');
+    infoDierenLezen();
   }
 
 
