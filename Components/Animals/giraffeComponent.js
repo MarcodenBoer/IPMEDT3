@@ -1,4 +1,4 @@
-function createGiraffe(){
+function createGiraffeAnimalInfo(){
     let camera = document.getElementById('js--cameraEl');
     let background = document.createElement("a-plane");
     let animal = document.createElement('a-obj-model');
@@ -29,7 +29,7 @@ AFRAME.registerComponent('giraffecomponent', {
     this.el.addEventListener('click', () =>{
       audio.play();
       setTimeout(() =>{
-        createGiraffe();
+        createGiraffeAnimalInfo();
       }, audio.duration);
     })
   }
