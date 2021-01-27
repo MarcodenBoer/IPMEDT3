@@ -1,4 +1,4 @@
-function createGiraffe(){
+function createGiraffeAnimalInfo(){
     let camera = document.getElementById('js--cameraEl');
     let background = document.createElement("a-plane");
     let animal = document.createElement('a-obj-model');
@@ -7,6 +7,7 @@ function createGiraffe(){
     background.setAttribute('opacity', '0');
     background.setAttribute('position', '0 1 -4');
     background.setAttribute('scale', '.5 .5 .5');
+    background.setAttribute('id', "js--infoBackground");
     info.setAttribute('color', 'black');
     info.setAttribute('position', '1 -.5 1');
     info.setAttribute('value', "info over een giraffe");
@@ -31,7 +32,7 @@ AFRAME.registerComponent('giraffecomponent', {
     this.el.addEventListener('click', () =>{
       audio.play();
       setTimeout(() =>{
-        createGiraffe();
+        createGiraffeAnimalInfo();
       }, audio.duration);
     })
   }
