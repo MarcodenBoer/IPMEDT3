@@ -18,6 +18,7 @@
     <script src="https://kit.fontawesome.com/5abd383914.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> <!-- AR implentatie -->
     <script src="foto.js"></script> <!-- Code om foto's te maken -->
+    <script src="api.js"></script> <!-- Code voor de API -->
 
     <title>Hospital Hero</title>
   </head>
@@ -103,7 +104,7 @@
       </a-marker>
 
       <a-marker type='pattern' url='./dieren in AR/marker/pattern-olifant.patt'>
-        <a-obj-model src="#olifant-obj" mtl="#olifant-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0" olifantComponent class="animals"></a-obj-model>
+        <a-obj-model src="#olifant-obj" mtl="#olifant-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-45 -90 90" olifantComponent class="animals"></a-obj-model>
       </a-marker>
 
       <a-marker type='pattern' url='./dieren in AR/marker/pattern-ostrich.patt'>
@@ -125,6 +126,9 @@
       <a-marker type='pattern' url='./dieren in AR/marker/pattern-zebra.patt'>
         <a-obj-model src="#zebra-obj" mtl="#zebra-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-90 0 0" zebraComponent class="animals"></a-obj-model>
       </a-marker>
+
+      <!-- Test code voor de API -->
+      <!-- <a-sphere id="js--test" class="animals" radius="1.25" color="yellow" position="0 0 -5"></a-sphere> -->
     </a-scene>
 
 

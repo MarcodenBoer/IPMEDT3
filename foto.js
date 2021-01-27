@@ -8,6 +8,11 @@ window.onload = function (){
 
   capture.style.display = "none";
 
+  if (!('getDisplayMedia' in navigator.mediaDevices)) {
+    takePhoto.style.display = "none";
+
+  }
+
 
   const takeScreenShot = async() => {
     const stream = await navigator.mediaDevices.getDisplayMedia({
