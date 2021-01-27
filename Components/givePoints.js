@@ -10,7 +10,7 @@ AFRAME.registerComponent('givepoints', {
         scoreAddedText.setAttribute("animation", "property: position; to: 0 20 0; easing: linear; dur: 1500");
         scoreAddedText.setAttribute("animation__fade", "property: opacity; from: 1; to: 0; easing: linear; dur: 500; delay: 1000");
         clickedAnimal.target.appendChild(scoreAddedText);
-        setInterval(function () {
+        setTimeout(function () {
           clickedAnimal.target.removeChild(scoreAddedText);
         }, 1500);
       })
