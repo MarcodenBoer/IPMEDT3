@@ -7,6 +7,7 @@ function createZebraAnimalInfo(){
     background.setAttribute('opacity', '0');
     background.setAttribute('position', '0 1 -4');
     background.setAttribute('scale', '.5 .5 .5');
+    background.setAttribute('id', "js--infoBackground");
     info.setAttribute('color', 'black');
     info.setAttribute('position', '1 -.5 1');
     info.setAttribute('value', "info over een zebra");

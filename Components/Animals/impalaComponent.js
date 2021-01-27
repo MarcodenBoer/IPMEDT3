@@ -4,13 +4,14 @@ function createHertAnimalInfo(){
     let animal = document.createElement('a-obj-model');
     let info = document.createElement('a-text');
     let clearInfoButton = document.getElementById('js--clearInfoButton');
+    let infoText = "De muntjak is een klein roodbruin hert uit Indonesië. Hij eet bladeren, kruiden, grassen, vruchten en zaden. Veel herten kunnen blaffen als een hond. De muntjak kan het extra goed. Blafhert is daarom zijn bijnaam. Zijn gewei is niet zo groot. Dat zit toch maar in de weg tussen de struiken. Hij heeft iets extra's: scherpe hoektanden."
     background.setAttribute('opacity', '0');
     background.setAttribute('position', '0 1 -4');
     background.setAttribute('scale', '.5 .5 .5');
     background.setAttribute('id', "js--infoBackground");
     info.setAttribute('color', 'black');
     info.setAttribute('position', '1 -.5 1');
-    info.setAttribute('value', "info over een giraffe");
+    info.setAttribute('value', infoText);
     animal.setAttribute('src', '#hert-obj');
     animal.setAttribute('mtl', '#hert-mtl');
     animal.setAttribute('position', '-2 -2 1');
