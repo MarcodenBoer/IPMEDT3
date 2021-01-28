@@ -4,14 +4,18 @@ function createGiraffeAnimalInfo(){
     let animal = document.createElement('a-obj-model');
     let info = document.createElement('a-text');
     let clearInfoButton = document.getElementById('js--clearInfoButton');
+    let mouseCircle = document.getElementById("js--mouseCircle");
+    let infoText = "Woon je op de tweede etage van een flat? Een Afrikaanse giraffe kijkt zo bij je naar binnen. Met die lange nek kan hij bij de hoogste blaadjes. Maar drinken is lastig. Zak een beetje door je poten, dan lukt het wel. Een pasgeboren giraf is al twee meter hoog. Hij behoort tot de grootste baby's in het dierenrijk. Wist je dat een giraf met zijn tong zijn oren kan schoonmaken?"
     background.setAttribute('opacity', '0');
     background.setAttribute('position', '0 1 -4');
     background.setAttribute('scale', '.5 .5 .5');
     background.setAttribute('id', "js--infoBackground");
     info.setAttribute('color', 'black');
-    info.setAttribute('position', '1 -.5 1');
-    info.setAttribute('value', "info over een giraffe");
+    info.setAttribute('position', '-.5 -1.5 1');
+    info.setAttribute('value', infoText);
     localStorage.setItem("infoDier", info.getAttribute("value"));
+    info.setAttribute('width', "3");
+    info.setAttribute('wrapcount', "25");
     animal.setAttribute('src', '#giraffe-obj');
     animal.setAttribute('mtl', '#giraffe-mtl');
     animal.setAttribute('position', '-2 -2 1');
@@ -22,18 +26,21 @@ function createGiraffeAnimalInfo(){
     camera.appendChild(background);
     clearInfoButton.style.opacity = 1;
     clearInfoButton.removeAttribute('disabled');
+    mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.005");
+    mouseCircle.setAttribute('cursor', 'fuse:false');
     infoDierenLezen();
   }
 
-
 AFRAME.registerComponent('giraffecomponent', {
   init: function(){
+    let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#giraffeSound");
     this.el.addEventListener('click', () =>{
       audio.play();
-      setTimeout(() =>{
+      if (clearInfoButton.style.opacity == 1) {return}
+      else {
         createGiraffeAnimalInfo();
-      }, audio.duration);
+      }
     })
   }
 })
