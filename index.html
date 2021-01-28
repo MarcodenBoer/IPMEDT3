@@ -34,7 +34,13 @@
       <a-image src = "#vinesImage" position = "1 1.25 -2"></a-image>
       <a-image src = "#grassImage" position = "1.5 -.5 -1"></a-image>
       <a-image src = "#grassImage" position = "-1.5 -.5 -1"></a-image>
+
+      <!--Dier scan UI -->
       <button id = "js--clearInfoButton" disabled style="position: absolute; left: 75%; top: 10%; border-radius: 100%; height: 10%; width:8%; transform: translateX(-50%); z-index: 2; opacity: 0; font-size: 25px; color: white; background-color: #386362; border: white 5px solid;">X</button>
+      <button id = "js--dierSound" disabled style="position: absolute; left: 40%; bottom: 10%; border-radius: 100%; height: 10%; width:8%; transform: translateX(-50%); z-index: 2; opacity: 0; font-size: 25px; color: white; background-color: #386362; border: white 5px solid;"><i class="fas fa-paw"></i></button>
+      <button id = "js--textSound" disabled style="position: absolute; left: 60%; bottom: 10%; border-radius: 100%; height: 10%; width:8%; transform: translateX(-50%); z-index: 2; opacity: 0; font-size: 25px; color: white; background-color: #386362; border: white 5px solid;"><i class="fas fa-comment"></i></button>
+
+
       <a-entity id="js--mouseCircle" animation__click = "property: scale; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1; startEvents: click"
               animation__fusing = "property: scale; easing: easeInCubic; dur: 2000; from: 1 1 1; to: 0.1 0.1 0.1; startEvents: fusing"
               animation__mouseLeave = "property: scale; easing: easeInCubic; dur: 500; to: 1 1 1; startEvents: mouseleave" cursor = "fuse: true; fuseTimeout: 2000;" material = "color: black; shader: flat;" geometry = "primitive: ring; radiusInner: 0.005; radiusOuter: 0.01" position = "0 0 -0.5" raycaster = "objects: .animals"></a-entity>
@@ -89,7 +95,7 @@
         <a-assets-item id="zebra-mtl" src="./dieren in AR/dieren/zebra/Zebra.mtl"></a-assets-item>
         <audio id="zebraSound" src="Sounds/zebra.mp3" preload="auto"></audio>
       </a-assets>
-      
+
       <!-- markers voor verschillende dieren -->
       <a-marker type='pattern' url='./dieren in AR/marker/pattern-giraffe.patt'>
         <a-obj-model src="#giraffe-obj" mtl="#giraffe-mtl" position="0 -2 0" scale="0.3 0.3 0.3 0.3" rotation="-90 0 0" giraffeComponent class="animals"></a-obj-model>
@@ -127,10 +133,10 @@
         <a-obj-model src="#zebra-obj" mtl="#zebra-mtl" position="0 -2 0" scale="0.3 0.3 0.3 0.3" rotation="-90 0 0" zebraComponent class="animals"></a-obj-model>
       </a-marker>
 
-      <!-- Test code voor de API -->
-      <!-- <a-sphere id="js--test" class="animals" radius="1.25" color="yellow" position="0 0 -5"></a-sphere> -->
+
     </a-scene>
     <script src="Components/clearInfo.js"></script>
+    <script src="Components/animalAndTextSound.js"></script>
     <script src="foto.js"></script> <!-- Code om foto's te maken -->
   </body>
 </html>

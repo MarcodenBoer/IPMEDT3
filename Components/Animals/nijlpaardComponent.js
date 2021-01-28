@@ -4,6 +4,8 @@ function createNijlpaardAnimalInfo(){
   let animal = document.createElement('a-obj-model');
   let info = document.createElement('a-text');
   let clearInfoButton = document.getElementById('js--clearInfoButton');
+  let dierSound = document.getElementById('js--dierSound');
+  let textSound = document.getElementById('js--textSound');
   let mouseCircle = document.getElementById("js--mouseCircle");
   let infoText = "Raar maar waar: lang geleden leefden er ook nijlpaarden in Nederland! Ze dobberden in de Rijn. Het grootste gevaar voor nijlpaarden is dat hun huid verbrand in de zon. Daarom liggen ze het liefst de hele dag in bad. Ze zweten een soort zonnecrème uit, voor als ze er toch op uit moeten. Hadden wij dat maar. Dan zouden we het zeewater minder vuil maken."
   background.setAttribute('opacity', '0');
@@ -26,15 +28,19 @@ function createNijlpaardAnimalInfo(){
   camera.appendChild(background);
   clearInfoButton.style.opacity = 1;
   clearInfoButton.removeAttribute('disabled');
+  dierSound.style.opacity = 1;
+  dierSound.removeAttribute('disabled');
+  textSound.style.opacity = 1;
+  textSound.removeAttribute('disabled');
   mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.005");
   mouseCircle.setAttribute('cursor', 'fuse:false');
-  infoDierenLezen();
   }
 
   AFRAME.registerComponent('nijlpaardcomponent', {
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#nijlpaardSound");
+    localStorage.setItem("audioDier", "#nijlpaardSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}

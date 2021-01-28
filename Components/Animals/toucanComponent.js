@@ -4,6 +4,8 @@ function createToucanAnimalInfo(){
   let animal = document.createElement('a-obj-model');
   let info = document.createElement('a-text');
   let clearInfoButton = document.getElementById('js--clearInfoButton');
+  let dierSound = document.getElementById('js--dierSound');
+  let textSound = document.getElementById('js--textSound');
   let mouseCircle = document.getElementById("js--mouseCircle");
   let infoText = "Kijk, die snavel! Het lijkt wel een banaan. De toekan plukt er vruchten mee. Ja, ook bananen. Het Amazonewoud in Zuid-Amerika is net een supermarkt. De toekan vindt er fruit en ook insecten, eieren en jonge vogels. Als ze gaan broeden, maken het mannetje en het vrouwtje een nest in een holle boom. Hoe zouden ze daar nou in komen met die reuzensnavel?"
   background.setAttribute('opacity', '0');
@@ -26,15 +28,19 @@ function createToucanAnimalInfo(){
   camera.appendChild(background);
   clearInfoButton.style.opacity = 1;
   clearInfoButton.removeAttribute('disabled');
+  dierSound.style.opacity = 1;
+  dierSound.removeAttribute('disabled');
+  textSound.style.opacity = 1;
+  textSound.removeAttribute('disabled');
   mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.005");
   mouseCircle.setAttribute('cursor', 'fuse:false');
-  infoDierenLezen();
   }
 
   AFRAME.registerComponent('toucancomponent', {
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#toucanSound");
+    localStorage.setItem("audioDier", "#toucanSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}

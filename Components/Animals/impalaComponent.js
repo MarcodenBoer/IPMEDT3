@@ -4,6 +4,8 @@ function createHertAnimalInfo(){
     let animal = document.createElement('a-obj-model');
     let info = document.createElement('a-text');
     let clearInfoButton = document.getElementById('js--clearInfoButton');
+    let dierSound = document.getElementById('js--dierSound');
+    let textSound = document.getElementById('js--textSound');
     let mouseCircle = document.getElementById("js--mouseCircle");
     let infoText = "De muntjak is een klein roodbruin hert uit Indonesie. Hij eet bladeren, kruiden, grassen, vruchten en zaden. Veel herten kunnen blaffen als een hond. De muntjak kan het extra goed. Blafhert is daarom zijn bijnaam. Zijn gewei is niet zo groot. Dat zit toch maar in de weg tussen de struiken. Hij heeft iets extra's: scherpe hoektanden."
     background.setAttribute('opacity', '0');
@@ -26,15 +28,19 @@ function createHertAnimalInfo(){
     camera.appendChild(background);
     clearInfoButton.style.opacity = 1;
     clearInfoButton.removeAttribute('disabled');
+    dierSound.style.opacity = 1;
+    dierSound.removeAttribute('disabled');
+    textSound.style.opacity = 1;
+    textSound.removeAttribute('disabled');
     mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.005");
     mouseCircle.setAttribute('cursor', 'fuse:false');
-    infoDierenLezen();
   }
 
 AFRAME.registerComponent('impalacomponent', {
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#impalaSound");
+    localStorage.setItem("audioDier", "#impalaSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}
