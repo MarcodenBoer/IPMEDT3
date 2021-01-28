@@ -11,22 +11,22 @@ function createPandaAnimalInfo(){
   background.setAttribute('scale', '.5 .5 .5');
   background.setAttribute('id', "js--infoBackground");
   info.setAttribute('color', 'black');
-  info.setAttribute('position', '-.5 -1.5 1');
+  info.setAttribute('position', '-.25 -1.5 1');
   info.setAttribute('value', infoText);
   localStorage.setItem("infoDier", info.getAttribute("value"));
   info.setAttribute('width', "3");
-  info.setAttribute('wrapcount', "25");
+  info.setAttribute('wrap-count', "30");
   animal.setAttribute('src', '#panda-obj');
   animal.setAttribute('mtl', '#panda-mtl');
-  animal.setAttribute('position', '-2 -2 1');
-  animal.setAttribute('scale', '0.1 0.1 0.1');
+  animal.setAttribute('position', '-2 -1.5 1');
+  animal.setAttribute('scale', '0.2 0.2 0.2');
   animal.setAttribute('animation', 'property: rotation; easing: linear; from: 0 0 0; to: 0 360 0; loop: true; dur: 2500;');
   background.appendChild(animal);
   background.appendChild(info);
   camera.appendChild(background);
   clearInfoButton.style.opacity = 1;
   clearInfoButton.removeAttribute('disabled');
-  mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.005");
+  mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.0051");
   mouseCircle.setAttribute('cursor', 'fuse:false');
   infoDierenLezen();
   }

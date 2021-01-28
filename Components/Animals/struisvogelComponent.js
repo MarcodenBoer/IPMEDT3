@@ -11,11 +11,11 @@ function createStruisvogelAnimalInfo(){
   background.setAttribute('scale', '.5 .5 .5');
   background.setAttribute('id', "js--infoBackground");
   info.setAttribute('color', 'black');
-  info.setAttribute('position', '-.5 -1.5 1');
+  info.setAttribute('position', '-.25 -1.5 1');
   info.setAttribute('value', infoText);
   localStorage.setItem("infoDier", info.getAttribute("value"));
   info.setAttribute('width', "3");
-  info.setAttribute('wrapcount', "25");
+  info.setAttribute('wrap-count', "30");
   animal.setAttribute('src', '#ostrich-obj');
   animal.setAttribute('mtl', '#ostrich-mtl');
   animal.setAttribute('position', '-2 -2 1');
@@ -26,7 +26,7 @@ function createStruisvogelAnimalInfo(){
   camera.appendChild(background);
   clearInfoButton.style.opacity = 1;
   clearInfoButton.removeAttribute('disabled');
-  mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.005");
+  mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.0051");
   mouseCircle.setAttribute('cursor', 'fuse:false');
   infoDierenLezen();
   }
