@@ -4,6 +4,8 @@ function createPandaAnimalInfo(){
   let animal = document.createElement('a-obj-model');
   let info = document.createElement('a-text');
   let clearInfoButton = document.getElementById('js--clearInfoButton');
+  let dierSound = document.getElementById('js--dierSound');
+  let textSound = document.getElementById('js--textSound');
   let mouseCircle = document.getElementById("js--mouseCircle");
   let infoText = "Geloof jij het: een roofdier die planten eet? Ik ook niet. En toch is het zo. Kijk maar naar de panda. Dat is een heuse beer. En beren zijn roofdieren. Maar de panda is vegetariër. Hij lust alleen bamboe. Nou ja, iemand moet dat opeten voor het alles overwoekert. Wist je dat de panda een extra duimpje heeft? Daar brengt hij handig een bamboestengel mee naar zijn mond."
   background.setAttribute('opacity', '0');
@@ -26,15 +28,19 @@ function createPandaAnimalInfo(){
   camera.appendChild(background);
   clearInfoButton.style.opacity = 1;
   clearInfoButton.removeAttribute('disabled');
+  dierSound.style.opacity = 1;
+  dierSound.removeAttribute('disabled');
+  textSound.style.opacity = 1;
+  textSound.removeAttribute('disabled');
   mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.0051");
   mouseCircle.setAttribute('cursor', 'fuse:false');
-  infoDierenLezen();
   }
 
   AFRAME.registerComponent('pandacomponent', {
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#pandaSound");
+    localStorage.setItem("audioDier", "#pandaSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}

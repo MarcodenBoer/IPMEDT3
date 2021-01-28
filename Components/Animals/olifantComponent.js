@@ -4,6 +4,8 @@ function createOlifantAnimalInfo(){
   let animal = document.createElement('a-obj-model');
   let info = document.createElement('a-text');
   let clearInfoButton = document.getElementById('js--clearInfoButton');
+  let dierSound = document.getElementById('js--dierSound');
+  let textSound = document.getElementById('js--textSound');
   let mouseCircle = document.getElementById("js--mouseCircle");
   let infoText = "Ken jij een nog groter dier? Dan weet je al veel van de natuur! Wat een giga oren he? Hij wappert ermee om af te koelen. In Afrika is het meestal erg warm. Daarom drinken  olifanten veel. Per dag wel 150 liter water. Dat is net zoveel als er in jouw badkuip past!"
   background.setAttribute('opacity', '0');
@@ -26,15 +28,19 @@ function createOlifantAnimalInfo(){
   camera.appendChild(background);
   clearInfoButton.style.opacity = 1;
   clearInfoButton.removeAttribute('disabled');
+  dierSound.style.opacity = 1;
+  dierSound.removeAttribute('disabled');
+  textSound.style.opacity = 1;
+  textSound.removeAttribute('disabled');
   mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.0051");
   mouseCircle.setAttribute('cursor', 'fuse:false');
-  infoDierenLezen();
   }
 
   AFRAME.registerComponent('olifantcomponent', {
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#olifantSound");
+    localStorage.setItem("audioDier", "#olifantSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}
