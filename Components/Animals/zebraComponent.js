@@ -15,13 +15,13 @@ function createZebraAnimalInfo(){
   background.setAttribute('color', '#fa9d44');
   background.setAttribute('scale', '15 15 5');
   background.setAttribute('position', '0 0 0.2');
-  info.setAttribute('color', 'black');
+  info.setAttribute('color', '#191919');
   info.setAttribute('position', '-.25 -2 1');
   info.setAttribute('value', infoText);
   localStorage.setItem("infoDier", info.getAttribute("value"));
   info.setAttribute('width', "3");
   info.setAttribute('wrap-count', "30");
-  naam.setAttribute('color', 'black');
+  naam.setAttribute('color', '#191919');
   naam.setAttribute('position', '-3 0 1');
   naam.setAttribute('scale', '1.5 1.25 1.25');
   naam.setAttribute('value', "Zebra");
@@ -30,7 +30,7 @@ function createZebraAnimalInfo(){
   animal.setAttribute('mtl', '#zebra-mtl');
   animal.setAttribute('position', '-2 -2 1');
   animal.setAttribute('scale', '0.2 0.2 0.2');
-  animal.setAttribute('animation', 'property: rotation; easing: linear; from: 0 0 0; to: 0 360 0; loop: true; dur: 2500;');
+  animal.setAttribute('animation', 'property: rotation; easing: linear; from: 0 0 0; to: 0 360 0; loop: true; dur: 3500;');
   container.appendChild(animal);
   container.appendChild(info);
   container.appendChild(background);
