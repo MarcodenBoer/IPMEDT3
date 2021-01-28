@@ -25,21 +25,27 @@
     <a-scene>
 
     <a-camera id="js--cameraEl">
-      <a-image src = "#vinesImage" position = "-3 1.25 -2"></a-image>
-      <a-image src = "#vinesImage" position = "-2 1.25 -2"></a-image>
-      <a-image src = "#vinesImage" position = "-1 1.25 -2"></a-image>
-      <a-image src = "#vinesImage" position = "0 1.25 -2"></a-image>
-      <a-image src = "#vinesImage" position = "3 1.25 -2"></a-image>
-      <a-image src = "#vinesImage" position = "2 1.25 -2"></a-image>
-      <a-image src = "#vinesImage" position = "1 1.25 -2"></a-image>
-      <a-image src = "#grassImage" position = "1.5 -.5 -1"></a-image>
-      <a-image src = "#grassImage" position = "-1.5 -.5 -1"></a-image>
+      <a-image src = "#vinesImage" position = "-3 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "-2 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "-1 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "0 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "3 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "2 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "1 1.1 -4"></a-image>
+      <a-image src = "#grassImage" position = ".8 -.65 -2" scale = ".75 .5 1"></a-image>
+      <a-image src = "#grassImage" position = "-.8 -.65 -2" scale = ".75 .5 1"></a-image>
+
+      <!--Dier scan UI -->
       <button id = "js--clearInfoButton" disabled style="position: absolute; left: 75%; top: 10%; border-radius: 100%; height: 10%; width:8%; transform: translateX(-50%); z-index: 2; opacity: 0; font-size: 25px; color: white; background-color: #386362; border: white 5px solid;">X</button>
+      <button id = "js--dierSound" disabled style="position: absolute; left: 40%; bottom: 10%; border-radius: 100%; height: 10%; width:8%; transform: translateX(-50%); z-index: 2; opacity: 0; font-size: 25px; color: white; background-color: #386362; border: white 5px solid;"><i class="fas fa-paw"></i></button>
+      <button id = "js--textSound" disabled style="position: absolute; left: 60%; bottom: 10%; border-radius: 100%; height: 10%; width:8%; transform: translateX(-50%); z-index: 2; opacity: 0; font-size: 25px; color: white; background-color: #386362; border: white 5px solid;"><i class="fas fa-comment"></i></button>
+
+
       <a-entity id="js--mouseCircle" animation__click = "property: scale; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1; startEvents: click"
               animation__fusing = "property: scale; easing: easeInCubic; dur: 2000; from: 1 1 1; to: 0.1 0.1 0.1; startEvents: fusing"
               animation__mouseLeave = "property: scale; easing: easeInCubic; dur: 500; to: 1 1 1; startEvents: mouseleave" cursor = "fuse: true; fuseTimeout: 2000;" material = "color: black; shader: flat;" geometry = "primitive: ring; radiusInner: 0.005; radiusOuter: 0.01" position = "0 0 -0.5" raycaster = "objects: .animals"></a-entity>
 
-      <!-- FOTOS MAKENN -->
+      <!-- FOTOS MAKEN -->
       <button id="js--camera" style="position: absolute; left: 50%; bottom: 50px; transform: translateX(-50%); border-radius: 100%; height: 100px; width: 100px; font-size: 50px; color: white; background-color: #386362; border: white 5px solid; z-index: 2;" type="button" name="button"><i class="fas fa-camera"></i></button>
       <section id="snapshot" style="position: absolute; width: 90vw; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 8px; background-color: #fa9d44; color: white; display: none; grid-template-areas: 'afbeelding' 'cancel' 'download'; row-gap: 20px; z-index: 2;">
         <canvas id="capture" width="320" height="240"></canvas> <!-- de height en width worden via js aangepast -->
@@ -89,7 +95,7 @@
         <a-assets-item id="zebra-mtl" src="./dieren in AR/dieren/zebra/Zebra.mtl"></a-assets-item>
         <audio id="zebraSound" src="Sounds/zebra.mp3" preload="auto"></audio>
       </a-assets>
-      
+
       <!-- markers voor verschillende dieren -->
       <a-marker type='pattern' url='./dieren in AR/marker/pattern-giraffe.patt'>
         <a-obj-model src="#giraffe-obj" mtl="#giraffe-mtl" position="0 -2 0" scale="0.3 0.3 0.3 0.3" rotation="-90 0 0" giraffeComponent class="animals"></a-obj-model>
@@ -127,10 +133,10 @@
         <a-obj-model src="#zebra-obj" mtl="#zebra-mtl" position="0 -2 0" scale="0.3 0.3 0.3 0.3" rotation="-90 0 0" zebraComponent class="animals"></a-obj-model>
       </a-marker>
 
-      <!-- Test code voor de API -->
-      <!-- <a-sphere id="js--test" class="animals" radius="1.25" color="yellow" position="0 0 -5"></a-sphere> -->
+
     </a-scene>
     <script src="Components/clearInfo.js"></script>
+    <script src="Components/animalAndTextSound.js"></script>
     <script src="foto.js"></script> <!-- Code om foto's te maken -->
   </body>
 </html>
