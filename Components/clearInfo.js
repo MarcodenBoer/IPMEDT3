@@ -2,7 +2,6 @@ const clearInfoButton = document.getElementById('js--clearInfoButton');
 let mouseCircle = document.getElementById("js--mouseCircle");
 
 function removeUi() {
-  console.log("klink");
   let camera = document.getElementById('js--cameraEl');
   let infoBackground = document.getElementById("js--infoBackground");
   camera.removeChild(infoBackground);
