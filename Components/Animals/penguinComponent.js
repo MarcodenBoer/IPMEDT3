@@ -6,6 +6,8 @@ function createPenguinAnimalInfo(){
   let info = document.createElement('a-text');
   let naam = document.createElement('a-text');
   let clearInfoButton = document.getElementById('js--clearInfoButton');
+  let dierSound = document.getElementById('js--dierSound');
+  let textSound = document.getElementById('js--textSound');
   let mouseCircle = document.getElementById("js--mouseCircle");
   let infoText = "Pinguins kunnen niet vliegen. Of toch wel: ze vliegen onder water. De meeste pinguins leven op de Zuidpool. Een dikke speklaag beschermt tegen de kou. Vaak kruipen pinguins dicht tegen elkaar om wam te blijven. Honderden pinguins vormen samen een groot dekbed. Pinguins leggen maar een ei. Het mannetje broedt het uit. Moeder gaat naar zee om eten te halen."
   container.setAttribute('opacity', '0');
@@ -37,15 +39,19 @@ function createPenguinAnimalInfo(){
   camera.appendChild(container);
   clearInfoButton.style.opacity = 1;
   clearInfoButton.removeAttribute('disabled');
+  dierSound.style.opacity = 1;
+  dierSound.removeAttribute('disabled');
+  textSound.style.opacity = 1;
+  textSound.removeAttribute('disabled');
   mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.0051");
   mouseCircle.setAttribute('cursor', 'fuse:false');
-  infoDierenLezen();
   }
 
   AFRAME.registerComponent('penguincomponent', {
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#penguinSound");
+    localStorage.setItem("audioDier", "#penguinSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}

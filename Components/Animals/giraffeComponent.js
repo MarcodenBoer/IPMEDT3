@@ -6,6 +6,8 @@ function createGiraffeAnimalInfo(){
     let info = document.createElement('a-text');
     let naam = document.createElement('a-text');
     let clearInfoButton = document.getElementById('js--clearInfoButton');
+    let dierSound = document.getElementById('js--dierSound');
+    let textSound = document.getElementById('js--textSound');
     let mouseCircle = document.getElementById("js--mouseCircle");
     let infoText = "Woon je op de tweede etage van een flat? Een Afrikaanse giraffe kijkt zo bij je naar binnen. Met die lange nek kan hij bij de hoogste blaadjes. Maar drinken is lastig. Zak een beetje door je poten, dan lukt het wel. Een pasgeboren giraf is al twee meter hoog. Hij behoort tot de grootste baby's in het dierenrijk. Wist je dat een giraf met zijn tong zijn oren kan schoonmaken?"
     container.setAttribute('opacity', '0');
@@ -37,15 +39,19 @@ function createGiraffeAnimalInfo(){
     camera.appendChild(container);
     clearInfoButton.style.opacity = 1;
     clearInfoButton.removeAttribute('disabled');
+    dierSound.style.opacity = 1;
+    dierSound.removeAttribute('disabled');
+    textSound.style.opacity = 1;
+    textSound.removeAttribute('disabled');
     mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.0051");
     mouseCircle.setAttribute('cursor', 'fuse:false');
-    infoDierenLezen();
   }
 
 AFRAME.registerComponent('giraffecomponent', {
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#giraffeSound");
+    localStorage.setItem("audioDier", "#giraffeSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}

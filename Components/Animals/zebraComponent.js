@@ -6,6 +6,8 @@ function createZebraAnimalInfo(){
   let info = document.createElement('a-text');
   let naam = document.createElement('a-text');
   let clearInfoButton = document.getElementById('js--clearInfoButton');
+  let dierSound = document.getElementById('js--dierSound');
+  let textSound = document.getElementById('js--textSound');
   let mouseCircle = document.getElementById("js--mouseCircle");
   let infoText = "Wat een schattig veulentje, he. Er bestaat geen tweede zebra met precies dezelfde strepen. Zebra's herkennen elkaar aan hun streepjescode. Maar als ze dicht bij elkaar staan, zie je niet meer wie wie is. Zo brengen ze leeuwen in verwarring. Denk jij dat zebra's zwarte dieren zijn met witte strepen of witte dieren met zwarte strepen?"
   container.setAttribute('opacity', '0');
@@ -38,15 +40,19 @@ function createZebraAnimalInfo(){
   camera.appendChild(container);
   clearInfoButton.style.opacity = 1;
   clearInfoButton.removeAttribute('disabled');
+  dierSound.style.opacity = 1;
+  dierSound.removeAttribute('disabled');
+  textSound.style.opacity = 1;
+  textSound.removeAttribute('disabled');
   mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.0051");
   mouseCircle.setAttribute('cursor', 'fuse:false');
-  infoDierenLezen();
   }
 
   AFRAME.registerComponent('zebracomponent', {
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#zebraSound");
+    localStorage.setItem("audioDier", "#zebraSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}
