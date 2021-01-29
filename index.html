@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="Components/Animals/penguinComponent.js"></script>
+    <script src="Components/Animals/olifantComponent.js"></script>
+    <script src="Components/Animals/giraffeComponent.js"></script>
+    <script src="Components/Animals/impalaComponent.js"></script>
+    <script src="Components/Animals/pandaComponent.js"></script>
+    <script src="Components/Animals/struisvogelComponent.js"></script>
+    <script src="Components/Animals/toucanComponent.js"></script>
+    <script src="Components/Animals/zebraComponent.js"></script>
+    <script src="Components/Animals/nijlpaardComponent.js"></script>
+
+    <script src="https://kit.fontawesome.com/5abd383914.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> <!-- AR implentatie -->
+    <title>Hospital Hero</title>
+  </head>
+  <body>
+    <a-scene vr-mode-ui="enabled: false" arjs="debugUIEnabled: false;">
+
+    <a-camera id="js--cameraEl">
+      <a-image src = "#vinesImage" position = "-3 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "-2 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "-1 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "0 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "3 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "2 1.1 -4"></a-image>
+      <a-image src = "#vinesImage" position = "1 1.1 -4"></a-image>
+      <a-image src = "#grassImage" position = "1.75 -1.25 -3.75" scale = "1 .75 1"></a-image>
+      <a-image src = "#grassImage" position = "-1.75 -1.25 -3.75" scale = "1 .75 1"></a-image>
+
+      <!--Dier scan UI -->
+      <button id = "js--clearInfoButton" disabled style="position: absolute; left: 62.5%; top: 5%; border-radius: 100%; height: 10%; width:8%; transform: translateX(-50%); z-index: 2; opacity: 0; font-size: 25px; color: white; background-color: #386362; border: white 5px solid;">X</button>
+      <button id = "js--dierSound" disabled style="position: absolute; left: 40%; bottom: 5%; border-radius: 100%; height: 10%; width:8%; transform: translateX(-50%); z-index: 2; opacity: 0; font-size: 25px; color: white; background-color: #386362; border: white 5px solid;"><i class="fas fa-paw"></i></button>
+      <button id = "js--textSound" disabled style="position: absolute; left: 60%; bottom: 5%; border-radius: 100%; height: 10%; width:8%; transform: translateX(-50%); z-index: 2; opacity: 0; font-size: 25px; color: white; background-color: #386362; border: white 5px solid;"><i class="fas fa-comment"></i></button>
+
+
+      <a-entity id="js--mouseCircle" animation__click = "property: scale; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1; startEvents: click"
+              animation__fusing = "property: scale; easing: easeInCubic; dur: 2000; from: 1 1 1; to: 0.1 0.1 0.1; startEvents: fusing"
+              animation__mouseLeave = "property: scale; easing: easeInCubic; dur: 500; to: 1 1 1; startEvents: mouseleave" cursor = "fuse: true; fuseTimeout: 2000;" material = "color: black; shader: flat;" geometry = "primitive: ring; radiusInner: 0.005; radiusOuter: 0.01" position = "0 0 -0.5" raycaster = "objects: .animals"></a-entity>
+
+
+    </a-camera>
+
+      <a-assets>
+        <img id="vinesImage" src="Images/vines.png" alt="Linanen voor de camera alsof je in de jungle loopt">
+        <img id="grassImage" src="Images/grass.png" alt="Gras onder aan de camera alsof je in de jungle loopt">
+
+        <a-assets-item id="giraffe-obj" src="./dieren in AR/dieren/giraffe/Giraffe.obj"></a-assets-item>
+        <a-assets-item id="giraffe-mtl" src="./dieren in AR/dieren/giraffe/Giraffe.mtl"></a-assets-item>
+        <audio id="giraffeSound" src="Sounds/giraffe.mp3" preload="auto"></audio>
+
+        <a-assets-item id="hert-obj" src="./dieren in AR/dieren/Hert/Hert.obj"></a-assets-item>
+        <a-assets-item id="hert-mtl" src="./dieren in AR/dieren/Hert/Hert.mtl"></a-assets-item>
+        <audio id="impalaSound" src="Sounds/impala.mp3" preload="auto"></audio>
+
+        <a-assets-item id="nijlpaard-obj" src="./dieren in AR/dieren/nijlpaard/nijlpaard.obj"></a-assets-item>
+        <a-assets-item id="nijlpaard-mtl" src="./dieren in AR/dieren/nijlpaard/nijlpaard.mtl"></a-assets-item>
+        <audio id="nijlpaardSound" src="Sounds/Hippo.mp3" preload="auto"></audio>
+
+        <a-assets-item id="olifant-obj" src="./dieren in AR/dieren/olifant/olifant.obj"></a-assets-item>
+        <a-assets-item id="olifant-mtl" src="./dieren in AR/dieren/olifant/olifant.mtl"></a-assets-item>
+        <audio id="olifantSound" src="Sounds/olifant.wav" preload="auto"></audio>
+
+        <a-assets-item id="ostrich-obj" src="./dieren in AR/dieren/ostrich/ostrich.obj"></a-assets-item>
+        <a-assets-item id="ostrich-mtl" src="./dieren in AR/dieren/ostrich/ostrich.mtl"></a-assets-item>
+        <audio id="struisvogelSound" src="Sounds/struisvogel.mp3" preload="auto"></audio>
+
+        <a-assets-item id="panda-obj" src="./dieren in AR/dieren/panda/panda.obj"></a-assets-item>
+        <a-assets-item id="panda-mtl" src="./dieren in AR/dieren/panda/panda.mtl"></a-assets-item>
+        <audio id="pandaSound" src="Sounds/panda.mp3" preload="auto"></audio>
+
+        <a-assets-item id="penguin-obj" src="./dieren in AR/dieren/penguin/penguin.obj"></a-assets-item>
+        <a-assets-item id="penguin-mtl" src="./dieren in AR/dieren/penguin/penguin.mtl"></a-assets-item>
+        <audio id="penguinSound" src="Sounds/penguin.mp3" preload="auto"></audio>
+
+        <a-assets-item id="toucan-obj" src="./dieren in AR/dieren/toucan/toucan.obj"></a-assets-item>
+        <a-assets-item id="toucan-mtl" src="./dieren in AR/dieren/toucan/toucan.mtl"></a-assets-item>
+        <audio id="toucanSound" src="Sounds/toucan.mp3" preload="auto"></audio>
+
+        <a-assets-item id="zebra-obj" src="./dieren in AR/dieren/zebra/Zebra.obj"></a-assets-item>
+        <a-assets-item id="zebra-mtl" src="./dieren in AR/dieren/zebra/Zebra.mtl"></a-assets-item>
+        <audio id="zebraSound" src="Sounds/zebra.mp3" preload="auto"></audio>
+      </a-assets>
+
+      <!-- markers voor verschillende dieren -->
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-giraffe.patt'>
+        <a-obj-model src="#giraffe-obj" mtl="#giraffe-mtl" position="0 -2 0" scale="0.3 0.3 0.3 0.3" rotation="-135 -90 90" giraffeComponent class="animals"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-hert.patt'>
+        <a-obj-model src="#hert-obj" mtl="#hert-mtl" position="0 -2 0" scale="0.4 0.4 0.4 0.4" rotation="-45 -90 90" impalaComponent class="animals"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-nijlpaard.patt'>
+        <a-obj-model src="#nijlpaard-obj" mtl="#nijlpaard-mtl" position="0 -2 0" scale="0.2 0.2 0.2 0.2" rotation="-45 -90 90" nijlpaardComponent class="animals"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-olifant.patt'>
+        <a-obj-model src="#olifant-obj" mtl="#olifant-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-45 -90 90" olifantComponent class="animals"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-ostrich.patt'>
+        <a-obj-model src="#ostrich-obj" mtl="#ostrich-mtl" position="0 -2 0" scale="0.2 0.2 0.2 0.2" rotation="-45 -90 90" struisvogelComponent class="animals"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-panda.patt'>
+        <a-obj-model src="#panda-obj" mtl="#panda-mtl" position="0 -2 0" scale="0.3 0.3 0.3 0.3" rotation="-45 -90 90" pandaComponent class="animals"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-penguin.patt'>
+        <a-obj-model src="#penguin-obj" mtl="#penguin-mtl" position="0 -2 0" scale="0.1 0.1 0.1 0.1" rotation="-45 -90 90" penguinComponent class="animals"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-toucan.patt'>
+        <a-obj-model src="#toucan-obj" mtl="#toucan-mtl" position="0 -2 0" scale="0.15 0.15 0.15 0.15" rotation="-45 -90 90" toucanComponent class="animals"></a-obj-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='./dieren in AR/marker/pattern-zebra.patt'>
+        <a-obj-model src="#zebra-obj" mtl="#zebra-mtl" position="0 -2 0" scale="0.3 0.3 0.3 0.3" rotation="-45 -90 90" zebraComponent class="animals"></a-obj-model>
+      </a-marker>
+
+
+    </a-scene>
+    <script src="Components/clearInfo.js"></script>
+    <script src="Components/animalAndTextSound.js"></script>
+    <script src="api.js"></script> <!-- Code voor de API -->
+  </body>
+</html>
