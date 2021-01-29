@@ -1,7 +1,12 @@
 //varibale zijn al gedefineerd in clearinfo.js
 
 function playTextSound() {
-  infoDierenLezen();
+    if (speechSynthesis.speaking) {
+      stopinfoDierenLezen();
+    }
+    else {
+      infoDierenLezen();
+    }
 }
 
 function playAnimalSound() {
