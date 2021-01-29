@@ -21,8 +21,8 @@ function createZebraAnimalInfo(){
   info.setAttribute('position', '-.25 -2 1');
   info.setAttribute('value', infoText);
   localStorage.setItem("infoDier", info.getAttribute("value"));
-  info.setAttribute('width', "3");
-  info.setAttribute('wrap-count', "30");
+  info.setAttribute('width', "3.5");
+  info.setAttribute('wrap-count', "25");
   naam.setAttribute('color', '#191919');
   naam.setAttribute('position', '-3 0 1');
   naam.setAttribute('scale', '1.5 1.25 1.25');
