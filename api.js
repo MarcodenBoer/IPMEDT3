@@ -1,4 +1,6 @@
 const utterance = new SpeechSynthesisUtterance()
+const infoBtn = document.getElementById('js--clearInfoButton');
+
 
 utterance.rate = 0.8; //zet de spraak snelheid wat lager.
 utterance.lang = "nl-NL"; //zet de taal op nederlands
@@ -9,3 +11,9 @@ function infoDierenLezen(){
   utterance.text = info
   speechSynthesis.speak(utterance);
 }
+
+function stopinfoDierenLezen() {
+  speechSynthesis.cancel();
+}
+
+infoBtn.addEventListener('click', stopinfoDierenLezen);
