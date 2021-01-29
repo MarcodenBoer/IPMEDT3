@@ -21,6 +21,7 @@ function createPenguinAnimalInfo(){
   info.setAttribute('position', '-.25 -2 1');
   info.setAttribute('value', infoText);
   localStorage.setItem("infoDier", info.getAttribute("value"));
+  localStorage.setItem("audioDier", "#penguinSound");
   info.setAttribute('width', "3.5");
   info.setAttribute('wrap-count', "25");
   naam.setAttribute('color', '#191919');
@@ -52,7 +53,6 @@ function createPenguinAnimalInfo(){
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#penguinSound");
-    localStorage.setItem("audioDier", "#penguinSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}
