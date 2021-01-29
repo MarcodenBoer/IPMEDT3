@@ -13,8 +13,6 @@
     <script src="Components/Animals/zebraComponent.js"></script>
     <script src="Components/Animals/nijlpaardComponent.js"></script>
 
-    <script src="Components/givePoints.js"></script>
-    <script src="Components/increase.js"></script>
     <script src="https://kit.fontawesome.com/5abd383914.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> <!-- AR implentatie -->
     <title>Hospital Hero</title>
@@ -43,14 +41,7 @@
               animation__fusing = "property: scale; easing: easeInCubic; dur: 2000; from: 1 1 1; to: 0.1 0.1 0.1; startEvents: fusing"
               animation__mouseLeave = "property: scale; easing: easeInCubic; dur: 500; to: 1 1 1; startEvents: mouseleave" cursor = "fuse: true; fuseTimeout: 2000;" material = "color: black; shader: flat;" geometry = "primitive: ring; radiusInner: 0.005; radiusOuter: 0.01" position = "0 0 -0.5" raycaster = "objects: .animals"></a-entity>
 
-      <!-- FOTOS MAKEN -->
-      <button id="js--camera" style="position: absolute; left: 50%; bottom: 50px; transform: translateX(-50%); border-radius: 100%; height: 100px; width: 100px; font-size: 50px; color: white; background-color: #386362; border: white 5px solid; z-index: 2;" type="button" name="button"><i class="fas fa-camera"></i></button>
-      <section id="snapshot" style="position: absolute; width: 90vw; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 8px; background-color: #fa9d44; color: white; display: none; grid-template-areas: 'afbeelding' 'cancel' 'download'; row-gap: 20px; z-index: 2;">
-        <canvas id="capture" width="320" height="240"></canvas> <!-- de height en width worden via js aangepast -->
-        <div id="js--image" style="grid-area: afbeelding; width: 100%; padding-bottom: 25px"></div>
-        <a id="js--download" style="grid-area: download; width: 100%; font-size: 25px; padding: 15px 0px; color: white; background-color: #386362; z-index: 2; text-align: center;" href="" download="download"><i class="fas fa-download" style="padding-right: 15px;"></i>Downloaden</a>
-        <div id="js--cancel" style="grid-area: cancel; width: 100%; font-size: 25px; padding: 15px 0px; color: white; background-color: #386362; z-index: 2; text-align: center;"><i class="fas fa-times" style="padding-right: 15px;"></i>Annuleren</div>
-      </section>
+
     </a-camera>
 
       <a-assets>
@@ -135,7 +126,6 @@
     </a-scene>
     <script src="Components/clearInfo.js"></script>
     <script src="Components/animalAndTextSound.js"></script>
-    <script src="foto.js"></script> <!-- Code om foto's te maken -->
     <script src="api.js"></script> <!-- Code voor de API -->
   </body>
 </html>
