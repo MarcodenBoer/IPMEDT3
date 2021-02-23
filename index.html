@@ -21,6 +21,13 @@
     <a-scene vr-mode-ui="enabled: false" arjs="debugUIEnabled: false;">
 
     <a-camera id="js--cameraEl">
+      <a-plane id="js--introContainer" position = '0 1 -4' scale = ".5 .5 .5">
+        <a-plane position = "0 0 0.2" scale = " 15 15 5" color = "#fa9d44"></a-plane>
+        <a-text id="js--introKop" position = '0 0 1' align = "center" value = "Help!" width= "10" wrap-count = "25" color = "#191919"></a-text>
+        <a-text id="js--introText" position = '0 -1.25 1' align = 'center' color = "#191919" value = "Oh nee, alle dieren zijn ontsnapt en lopen nu vrij rond door het ziekenhuis. Help jij ze te vangen en word jij onze Hospital Hero?" wrap-count = "35" width = '5'></a-text>
+        <button id="js--introButton" style="position: absolute; left: 50%; top: 85%; border-radius: 5%; height: 15%; width:25%; transform: translateX(-50%); z-index: 2; font-size: 35px; color: white; background-color: #386362; border: white 5px solid;">Help nu!</button>
+      </a-plane>
+
       <a-image src = "#vinesImage" position = "-3 1.1 -4"></a-image>
       <a-image src = "#vinesImage" position = "-2 1.1 -4"></a-image>
       <a-image src = "#vinesImage" position = "-1 1.1 -4"></a-image>
@@ -39,7 +46,7 @@
 
       <a-entity id="js--mouseCircle" animation__click = "property: scale; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1; startEvents: click"
               animation__fusing = "property: scale; easing: easeInCubic; dur: 2000; from: 1 1 1; to: 0.1 0.1 0.1; startEvents: fusing"
-              animation__mouseLeave = "property: scale; easing: easeInCubic; dur: 500; to: 1 1 1; startEvents: mouseleave" cursor = "fuse: true; fuseTimeout: 2000;" material = "color: black; shader: flat;" geometry = "primitive: ring; radiusInner: 0.005; radiusOuter: 0.01" position = "0 0 -0.5" raycaster = "objects: .animals"></a-entity>
+              animation__mouseLeave = "property: scale; easing: easeInCubic; dur: 500; to: 1 1 1; startEvents: mouseleave" cursor = "fuse: false; fuseTimeout: 2000;" material = "color: black; shader: flat;" geometry = "primitive: ring; radiusInner: 0.005; radiusOuter: 0.0051" position = "0 0 -0.5" raycaster = "objects: .animals"></a-entity>
 
 
     </a-camera>
@@ -125,6 +132,7 @@
 
     </a-scene>
     <script src="Components/clearInfo.js"></script>
+    <script src="Components/intro.js"></script>
     <script src="Components/animalAndTextSound.js"></script>
     <script src="api.js"></script> <!-- Code voor de API -->
   </body>
