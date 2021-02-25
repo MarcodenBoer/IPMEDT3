@@ -1,4 +1,17 @@
+let gevangenPanda = false;
+let displayPanda = false;
+
 function createPandaAnimalInfo(){
+  if (gevangenPanda == false) {
+    collectedAnimals.push(createPandaAnimalInfo);
+    gevangenPanda = true;
+    btn.style.display = "none";
+  }
+  else if (gevangenPanda == true) {
+    logbook.style.display = "none";
+    displayPanda = true;
+  }
+
   let camera = document.getElementById('js--cameraEl');
   let container = document.createElement("a-plane");
   let background = document.createElement('a-plane');

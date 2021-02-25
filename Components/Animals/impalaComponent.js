@@ -1,4 +1,17 @@
+let gevangenHert = false;
+let displayHert = false;
+
 function createHertAnimalInfo(){
+  if (gevangenHert == false) {
+    collectedAnimals.push(createHertAnimalInfo);
+    gevangenHert = true;
+    btn.style.display = "none";
+  }
+  else if (gevangenHert == true) {
+    logbook.style.display = "none";
+    displayHert = true;
+  }
+
     let camera = document.getElementById('js--cameraEl');
     let container = document.createElement("a-plane");
     let background = document.createElement('a-plane');
@@ -52,6 +65,7 @@ AFRAME.registerComponent('impalacomponent', {
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#impalaSound");
+    let gevangen = false;
     localStorage.setItem("audioDier", "#impalaSound");
     this.el.addEventListener('click', () =>{
       audio.play();

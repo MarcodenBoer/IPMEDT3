@@ -14,6 +14,7 @@ function playAnimalSound() {
   //omdat localStorage het anders omzet naar een string en dan kan je .play() niet aanroepen
   let audioSrc = localStorage.getItem("audioDier");
   let audio = document.querySelector(audioSrc);
+  console.log(audioSrc);
   audio.play();
 
 }

@@ -1,6 +1,9 @@
 const utterance = new SpeechSynthesisUtterance()
 const infoBtn = document.getElementById('js--clearInfoButton');
 
+const logbook = document.getElementById('js--logbook'); //deze wordt gedefineerd voor de progress.js hier omdat het ingeladen moet zijn voor de components en voor progress moeten de components ingeladen zijn
+const btn = document.getElementById('js--log-button');
+
 
 utterance.rate = 0.8; //zet de spraak snelheid wat lager.
 utterance.lang = "nl-NL"; //zet de taal op nederlands

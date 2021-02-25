@@ -3,15 +3,6 @@
   <head>
     <meta charset="utf-8">
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-    <script src="Components/Animals/penguinComponent.js"></script>
-    <script src="Components/Animals/olifantComponent.js"></script>
-    <script src="Components/Animals/giraffeComponent.js"></script>
-    <script src="Components/Animals/impalaComponent.js"></script>
-    <script src="Components/Animals/pandaComponent.js"></script>
-    <script src="Components/Animals/struisvogelComponent.js"></script>
-    <script src="Components/Animals/toucanComponent.js"></script>
-    <script src="Components/Animals/zebraComponent.js"></script>
-    <script src="Components/Animals/nijlpaardComponent.js"></script>
 
     <script src="Components/givePoints.js"></script>
     <script src="Components/increase.js"></script>
@@ -50,6 +41,21 @@
         <div id="js--image" style="grid-area: afbeelding; width: 100%; padding-bottom: 25px"></div>
         <a id="js--download" style="grid-area: download; width: 100%; font-size: 25px; padding: 15px 0px; color: white; background-color: #386362; z-index: 2; text-align: center;" href="" download="download"><i class="fas fa-download" style="padding-right: 15px;"></i>Downloaden</a>
         <div id="js--cancel" style="grid-area: cancel; width: 100%; font-size: 25px; padding: 15px 0px; color: white; background-color: #386362; z-index: 2; text-align: center;"><i class="fas fa-times" style="padding-right: 15px;"></i>Annuleren</div>
+      </section>
+
+      <!-- PROGRESS LOG-->
+      <button id="js--log-button"  type="button" name="button" style="position: fixed; left: 20%; bottom: 50px; transform: translateX(-50%); border-radius: 100%; height: 100px; width: 100px; font-size: 50px; color: white; background-color: #386362; border: white 5px solid; z-index: 2;"><i class="fas fa-paw"></i></button>
+      <section id="js--logbook" style="position: fixed; width: 90vw; height: 80vh;top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 8px; background-color: #fa9d44; color: white; display: none; row-gap: 20px; z-index: 2;">
+        <button id = "js--clear-logbook" style=" display: none; position: fixed; right: -5%; top: 2%; border-radius: 100%; height: 60px; width: 60px; transform: translateX(-50%); z-index: 2; font-size: 40px; color: white; background-color: #386362; border: white 5px solid;"><i class="fas fa-times"></i></button>
+        <h2 id="js--logbook-title" style="font-size: 30px; font-weight: 400; padding: 20px; width: 75%;">Je hebt al ... van de 9 dieren gevangen</h2>
+        <section id="js--logbook-wrapper" style="padding: 20px; display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px;"></section>
+      </section>
+
+      <!-- Alle dieren gevangen -->
+      <section id="js--finish" style="position: fixed; width: 80vw; height: 80vh;top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 8px; background-color: #fa9d44; color: white; display: none; padding: 20px; z-index: 2;">
+        <button id = "js--close-finish" style=" position: fixed; right: -5%; top: 2%; border-radius: 100%; height: 60px; width: 60px; transform: translateX(-50%); z-index: 2; font-size: 40px; color: white; background-color: #386362; border: white 5px solid;"><i class="fas fa-times"></i></button>
+        <h2 style="font-size: 30px; font-weight: 400; padding: 20px;">Gefeliciteerd je hebt alle dieren gevangen!</h2>
+        <p>Jij hebt het ziekenhuis geholpen om alle dieren te vangen. jij bent onze Hospital Hero. Nu kan het ziekhuis weer iedereen helpen.</p>
       </section>
     </a-camera>
 
@@ -137,5 +143,18 @@
     <script src="Components/animalAndTextSound.js"></script>
     <script src="foto.js"></script> <!-- Code om foto's te maken -->
     <script src="api.js"></script> <!-- Code voor de API -->
+
+
+    <script src="Components/Animals/penguinComponent.js"></script>
+    <script src="Components/Animals/olifantComponent.js"></script>
+    <script src="Components/Animals/giraffeComponent.js"></script>
+    <script src="Components/Animals/impalaComponent.js"></script>
+    <script src="Components/Animals/pandaComponent.js"></script>
+    <script src="Components/Animals/struisvogelComponent.js"></script>
+    <script src="Components/Animals/toucanComponent.js"></script>
+    <script src="Components/Animals/zebraComponent.js"></script>
+    <script src="Components/Animals/nijlpaardComponent.js"></script>
+
+    <script src="progress.js"></script> <!-- Code voor het logboek -->
   </body>
 </html>

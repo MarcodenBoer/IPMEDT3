@@ -1,4 +1,17 @@
+let gevangenZebra = false;
+let displayZebra = false;
+
 function createZebraAnimalInfo(){
+  if (gevangenZebra == false) {
+    collectedAnimals.push(createZebraAnimalInfo);
+    gevangenZebra = true;
+    btn.style.display = "none";
+  }
+  else if (gevangenZebra == true) {
+    logbook.style.display = "none";
+    displayZebra = true;
+  }
+
   let camera = document.getElementById('js--cameraEl');
   let container = document.createElement("a-plane");
   let background = document.createElement('a-plane');

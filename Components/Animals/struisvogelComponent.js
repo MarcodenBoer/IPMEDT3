@@ -1,4 +1,17 @@
+let gevangenStruisvogel = false;
+let displayStruisvogel = false;
+
 function createStruisvogelAnimalInfo(){
+  if (gevangenStruisvogel == false) {
+    collectedAnimals.push(createStruisvogelAnimalInfo);
+    gevangenStruisvogel = true;
+    btn.style.display = "none";
+  }
+  else if (gevangenStruisvogel == true) {
+    logbook.style.display = "none";
+    displayStruisvogel = true;
+  }
+
   let camera = document.getElementById('js--cameraEl');
   let container = document.createElement("a-plane");
   let background = document.createElement('a-plane');
