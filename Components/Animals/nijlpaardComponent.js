@@ -34,6 +34,7 @@ function createNijlpaardAnimalInfo(){
   info.setAttribute('position', '-.25 -2 1');
   info.setAttribute('value', infoText);
   localStorage.setItem("infoDier", info.getAttribute("value"));
+  localStorage.setItem("audioDier", "#nijlpaardSound");
   info.setAttribute('width', "3.5");
   info.setAttribute('wrap-count', "25");
   naam.setAttribute('color', '#191919');
@@ -65,7 +66,6 @@ function createNijlpaardAnimalInfo(){
   init: function(){
     let clearInfoButton = document.getElementById('js--clearInfoButton');
     let audio = document.querySelector("#nijlpaardSound");
-    localStorage.setItem("audioDier", "#nijlpaardSound");
     this.el.addEventListener('click', () =>{
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}
