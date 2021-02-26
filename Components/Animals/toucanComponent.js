@@ -5,12 +5,12 @@ function createToucanAnimalInfo(){
   if (gevangenToucan == false) {
     collectedAnimals.push(createToucanAnimalInfo);
     gevangenToucan = true;
-    btn.style.display = "none";
   }
   else if (gevangenToucan == true) {
     logbook.style.display = "none";
     displayToucan = true;
   }
+  btn.style.display = "none";
 
   let camera = document.getElementById('js--cameraEl');
   let container = document.createElement("a-plane");

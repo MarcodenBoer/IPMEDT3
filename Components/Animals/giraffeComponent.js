@@ -5,12 +5,12 @@ function createGiraffeAnimalInfo(){
     if (gevangenGiraffe == false) {
       collectedAnimals.push(createGiraffeAnimalInfo);
       gevangenGiraffe = true;
-      btn.style.display = "none";
     }
     else if (gevangenGiraffe == true) {
       logbook.style.display = "none";
       displayGiraffe = true;
     }
+    btn.style.display = "none";
 
     let camera = document.getElementById('js--cameraEl');
     let container = document.createElement("a-plane");

@@ -5,12 +5,12 @@ function createStruisvogelAnimalInfo(){
   if (gevangenStruisvogel == false) {
     collectedAnimals.push(createStruisvogelAnimalInfo);
     gevangenStruisvogel = true;
-    btn.style.display = "none";
   }
   else if (gevangenStruisvogel == true) {
     logbook.style.display = "none";
     displayStruisvogel = true;
   }
+  btn.style.display = "none";
 
   let camera = document.getElementById('js--cameraEl');
   let container = document.createElement("a-plane");

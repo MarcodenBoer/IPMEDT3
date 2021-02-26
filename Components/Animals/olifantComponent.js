@@ -5,12 +5,12 @@ function createOlifantAnimalInfo(){
   if (gevangenOlifant == false) {
     collectedAnimals.push(createOlifantAnimalInfo);
     gevangenOlifant = true;
-    btn.style.display = "none";
   }
   else if (gevangenOlifant == true) {
     logbook.style.display = "none";
     displayOlifant = true;
   }
+  btn.style.display = "none";
   let camera = document.getElementById('js--cameraEl');
   let container = document.createElement("a-plane");
   let background = document.createElement('a-plane');

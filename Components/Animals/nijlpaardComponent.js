@@ -5,12 +5,12 @@ function createNijlpaardAnimalInfo(){
   if (gevangenNijlpaard == false) {
     collectedAnimals.push(createNijlpaardAnimalInfo);
     gevangenNijlpaard = true;
-    btn.style.display = "none";
   }
   else if (gevangenNijlpaard == true) {
     logbook.style.display = "none";
     displayNijlpaard = true;
   }
+  btn.style.display = "none";
 
   let camera = document.getElementById('js--cameraEl');
   let container = document.createElement("a-plane");

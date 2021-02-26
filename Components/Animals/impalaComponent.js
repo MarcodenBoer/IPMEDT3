@@ -5,12 +5,12 @@ function createHertAnimalInfo(){
   if (gevangenHert == false) {
     collectedAnimals.push(createHertAnimalInfo);
     gevangenHert = true;
-    btn.style.display = "none";
   }
   else if (gevangenHert == true) {
     logbook.style.display = "none";
     displayHert = true;
   }
+  btn.style.display = "none";
 
     let camera = document.getElementById('js--cameraEl');
     let container = document.createElement("a-plane");

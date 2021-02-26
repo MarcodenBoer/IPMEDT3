@@ -5,12 +5,12 @@ function createPenguinAnimalInfo(){
   if (gevangenPenguin == false) {
     collectedAnimals.push(createPenguinAnimalInfo);
     gevangenPenguin = true;
-    btn.style.display = "none";
   }
   else if (gevangenPenguin == true) {
     logbook.style.display = "none";
     displayPenguin = true;
   }
+  btn.style.display = "none";
 
   let camera = document.getElementById('js--cameraEl');
   let container = document.createElement("a-plane");

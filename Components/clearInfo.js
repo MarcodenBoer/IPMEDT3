@@ -5,6 +5,7 @@ const textSound = document.getElementById('js--textSound');
 const finish = document.getElementById('js--finish');
 const closeFinish = document.getElementById('js--close-finish');
 let gevangen = false;
+let scanned = false;
 
 let mouseCircle = document.getElementById("js--mouseCircle");
 
@@ -21,8 +22,6 @@ function removeUi() {
   mouseCircle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.01");
   mouseCircle.setAttribute('cursor', "fuse: true; fuseTimeout: 2000;");
   if (displayGiraffe == true || displayHert == true || displayNijlpaard == true || displayOlifant == true || displayPanda == true || displayPenguin == true || displayStruisvogel == true || displayToucan == true || displayZebra == true) {
-    logbook.style.display = "block";
-
     displayGiraffe = false;
     displayHert = false;
     displayNijlpaard = false;
@@ -37,8 +36,13 @@ function removeUi() {
   if (gevangenGiraffe == true && gevangenHert == true && gevangenNijlpaard == true && gevangenOlifant == true && gevangenPanda == true && gevangenPenguin == true && gevangenStruisvogel == true && gevangenToucan == true && gevangenZebra == true && gevangen == false) {
     caughtAllAnimals();
   }
-
-  btn.style.display = "block";
+  if (scanned == true) {
+    logbook.style.display = "block";
+    btn.style.display = "none";
+  }
+  else {
+    btn.style.display = "block";
+  }
 }
 
 function caughtAllAnimals() {

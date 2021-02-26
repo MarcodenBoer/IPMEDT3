@@ -8,6 +8,7 @@ function progress() {
   window.collectedAnimals = []; //maakt een global array aan
 
   function showLogbook() {
+    scanned = true;
     logbook.style.display = "block";
     closeBtn.style.display = "block";
     if (collectedAnimals.length == 9) {
@@ -25,6 +26,7 @@ function progress() {
   }
 
   function closeLogbook(){
+    scanned = false;
     logbook.style.display = "none";
     closeBtn.style.display = "none";
 

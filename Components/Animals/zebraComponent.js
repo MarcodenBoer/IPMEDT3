@@ -5,12 +5,12 @@ function createZebraAnimalInfo(){
   if (gevangenZebra == false) {
     collectedAnimals.push(createZebraAnimalInfo);
     gevangenZebra = true;
-    btn.style.display = "none";
   }
   else if (gevangenZebra == true) {
     logbook.style.display = "none";
     displayZebra = true;
   }
+  btn.style.display = "none";
 
   let camera = document.getElementById('js--cameraEl');
   let container = document.createElement("a-plane");
