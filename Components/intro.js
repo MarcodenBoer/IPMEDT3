@@ -5,6 +5,7 @@ const introText = document.getElementById('js--introText');
 const camera = document.getElementById('js--cameraEl');
 const circle = document.getElementById('js--mouseCircle');
 const animalContainer = document.getElementById('js--animalContainer');
+const logButton = document.getElementById('js--log-button');
 let counter = 0;
 
 function progressApp(){
@@ -24,6 +25,7 @@ function progressApp(){
     camera.removeChild(introContainer);
     circle.setAttribute('geometry', "primitive: ring; radiusInner: 0.005; radiusOuter: 0.01");
     circle.setAttribute('cursor', "fuse: true; fuseTimeout: 2000;");
+    logButton.style.display = "block";
   }
 }
 
