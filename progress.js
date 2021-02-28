@@ -54,8 +54,9 @@ function progress() {
       //Button stylen
       btnAnimal.style.backgroundColor = "#386362";
       btnAnimal.style.color = "white";
-      btnAnimal.style.width = "140px";
-      btnAnimal.style.height = "40px";
+      btnAnimal.style.padding = "2.5%";
+      btnAnimal.style.width = "47.5%";
+      btnAnimal.style.height = "20%";
       btnAnimal.style.border = "none";
       btnAnimal.style.fontSize = "20px";
 

@@ -1,9 +1,9 @@
 let gevangenHert = false;
 let displayHert = false;
 
-function createHertAnimalInfo(){
+function createMuntjakAnimalInfo(){
   if (gevangenHert == false) {
-    collectedAnimals.push(createHertAnimalInfo);
+    collectedAnimals.push(createMuntjakAnimalInfo);
     gevangenHert = true;
   }
   else if (gevangenHert == true) {
@@ -34,6 +34,7 @@ function createHertAnimalInfo(){
     info.setAttribute('position', '-.25 -2 1');
     info.setAttribute('value', infoText);
     localStorage.setItem("infoDier", info.getAttribute("value"));
+    localStorage.setItem("audioDier", "#impalaSound");
     info.setAttribute('width', "3.5");
     info.setAttribute('wrap-count', "25");
     naam.setAttribute('color', '#191919');
@@ -71,7 +72,7 @@ AFRAME.registerComponent('impalacomponent', {
       audio.play();
       if (clearInfoButton.style.opacity == 1) {return}
       else {
-        createHertAnimalInfo();
+        createMuntjakAnimalInfo();
       }
     })
   }
